@@ -32,6 +32,14 @@ function findLongestWord(str) {
     return longestWord;
   }
  console.log(findLongestWord("The quicker brown fox jumped over the lazy dog"));
+
+ function findLongestWordLength(str) {
+    return str.split(' ')
+      .reduce(function(longest, word) {
+        return Math.max(longest, word.length)
+      }, 0);
+  }
+ console.log(findLongestWord("ha hey really"))
   
  
  //longest word
