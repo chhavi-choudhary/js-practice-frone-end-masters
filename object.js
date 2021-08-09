@@ -35,7 +35,7 @@ var dogs = {
   console.log(ourDog1);
 
 
-
+// switch case to lookups
 
   function phoneticLookup(val) {
     var result = "";
@@ -47,8 +47,43 @@ var dogs = {
       "echo":"Easy",
      "foxtrot":"Frank"
     }
-  return lookup[val]
-    // Only change code above this line
-    return result;
+  return result=lookup[val]
+   
+}
+  console.log(phoneticLookup("charlie"),phoneticLookup("bravo"));
+
+  
+  
+  var obj={
+    gift: "pony", 
+    pet: "kitten", 
+    bed: "sleigh",
+    city: "Seattle"
+    }
+    
+function checkObj(obj, checkProp) {
+   if(obj.hasOwnProperty(checkProp)){
+     return obj[checkProp];
+   }
+   else{
+     return "Not Found";
+   }
+}
+
+console.log(checkObj("pet"))
+console.log(checkObj("city"))
+
+var ourStorage = {
+  "desk": {
+    "drawer": "stapler"
+  },
+  "cabinet": {
+    "top drawer": { 
+      "folder1": "a file",
+      "folder2": "secrets"
+    },
+    "bottom drawer": "soda"
   }
-  console.log(phoneticLookup("charlie"));
+};
+ourStorage.cabinet["top drawer"].folder2;
+ourStorage.desk.drawer;
