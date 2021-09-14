@@ -26,13 +26,14 @@ let contacts = [
 ];
 
 
-function lookUpProfile(name, prop) {
+
     function lookUpProfile(name, prop) {
         for (let x = 0; x < contacts.length; x++) {
           if (contacts[x].firstName === name) {
             if (contacts[x].hasOwnProperty(prop)) {
               return contacts[x][prop];
-            } else {
+            } 
+            else {
               return "No such property";
             }
           }
@@ -40,6 +41,19 @@ function lookUpProfile(name, prop) {
         return "No such contact";
       }
       
-}
 
-lookUpProfile("Akira", "likes");
+
+// function lookUpProfile(firstName, prop) {
+//   for(var i=0;i<contacts.length;i++) {
+//  if(firstName === contacts[i].firstName && prop === contacts[i].prop)
+//  return contacts[i].prop;
+//  else if (firstName != contacts[i].firstName)
+//  return "No such contact";
+//  else
+//  return "No such property";
+//  }
+// }
+
+console.log(lookUpProfile("Kristian", "lastName"))
+
+console.log(lookUpProfile("Akira", "likes"));
